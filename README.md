@@ -1,5 +1,5 @@
 # Gestor_de_tasques_interactiu
-![Imatge gestor](gestor_de_tasques/src/assets/captura.JPG)
+![Imatge gestor](gestor_de_tasques/src/assets/Captura.JPG)
 
 Aquest projecte és un **Gestor de Tasques** creat amb **Vue 3**, amb funcionalitats bàsiques per gestionar tasques.
 

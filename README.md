@@ -1,13 +1,7 @@
 # Gestor_de_tasques_interactiu
-![Imatge gestor](src/assets/captura.JPG)
+![Imatge gestor](gestor_de_tasques/src/assets/captura.JPG)
 
-Aquest projecte és un **Gestor de Tasques** creat amb **Vue 3**, amb funcionalitats bàsiques com:
-- afegir tasques
-- marcar tasques com a realitzades
-- eliminar tasques
-- filtrar tasques pendents 
-- mostrar el total de tasques
-- mostrar el total de tasques pendents.
+Aquest projecte és un **Gestor de Tasques** creat amb **Vue 3**, amb funcionalitats bàsiques per gestionar tasques.
 
 ## Requisits previs
 
@@ -33,3 +27,14 @@ Per crear el projecte Vue 3 utilitza:
 - Eliminar tasques amb un botó de paperera
 - Filtrar només les tasques pendents amb un checkbox
 - Mostrar totals i pendents amb comptadors automàtics
+
+## Captures:
+
+![Imatge gestor](gestor_de_tasques/src/assets/gestor1.JPG)
+![Imatge gestor](gestor_de_tasques/src/assets/gestor2.JPG)
+![Imatge gestor](gestor_de_tasques/src/assets/gestor3.JPG)
+
+###
+Autora: Silvia Serra
+Assignatura: M14 (Desenvolupament d'aplicacions per entorns mòbils)
+Any: 2025 / 2026 

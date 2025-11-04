@@ -40,7 +40,7 @@ const llistaFiltrada = computed(() => {
   <HeaderComponent />
 
   <main>
-    <h2>Llistat de Tasques:</h2>
+    <h2>Gestiona les teves tasques:</h2>
 
     <form @submit.prevent="afegirTasca">
       <input
@@ -52,11 +52,16 @@ const llistaFiltrada = computed(() => {
       <button type="submit">Afegir Tasca</button>
     </form>
 
+    <h3>Llista de Tasques:</h3>
     <div class="mostra_pendents">
       <input type="checkbox" v-model="mostrarPendents" id="pendents" />
       <label for="pendents">Mostra només pendents</label>
+      <p class="pendents" v-if="mostrarPendents">Tasques pendents:</p>
     </div>
 
+    <p class="missatge" v-if="llista.length === 0">
+      (introdueix tasques perque es mostrin aquí)
+    </p>
     <ul>
       <li v-for="(tasca, index) in llistaFiltrada" :key="index">
         {{ tasca.titol }}
@@ -72,7 +77,10 @@ const llistaFiltrada = computed(() => {
       </li>
     </ul>
 
-    <div>Totals: {{ Totals }} | Pendents: {{ Pendents }}</div>
+    <div class="totals">
+     <h4> Totals: {{ Totals }} | Pendents: {{ Pendents }} </h4>
+    </div>
+
   </main>
 </template>
 
@@ -80,8 +88,9 @@ const llistaFiltrada = computed(() => {
 * {
   font-family: "Audiowide", cursive;
 }
-h1 {
-  font-family: "Audiowide", cursive;
+h1,
+h2,
+h3 {
   color: rgb(186, 69, 96);
   text-align: center;
   margin: 0;
@@ -141,7 +150,7 @@ button:hover {
 /* Llista de tasques */
 ul {
   list-style: none;
-  padding: 0;
+  padding-top: 20px;
   margin: 0;
 }
 
@@ -175,7 +184,20 @@ div.counter {
 }
 
 .mostra_pendents {
-  margin-bottom: 1rem;
   font-size: 1rem;
+  padding-top: 20px;
+}
+.pendents {
+  color: rgb(186, 69, 96);
+}
+.missatge {
+  color: #a9a9a9;
+}
+
+form {
+  padding-top: 20px;
+}
+.totals {
+  margin-top: 20px;
 }
 </style>

@@ -58,6 +58,8 @@ const llistaFiltrada = computed(() => {
       <input type="checkbox" v-model="mostrarPendents" id="pendents" />
       <label for="pendents">Mostra només pendents</label>
       <p class="pendents" v-if="mostrarPendents">Tasques pendents:</p>
+      <p class="missatge" v-if="Pendents === 0">(No hi ha tasques pendents)</p>
+
     </div>
 
     <p class="missatge" v-if="llista.length === 0">
@@ -82,7 +84,7 @@ const llistaFiltrada = computed(() => {
      <h4> Totals: {{ Totals }} | Pendents: {{ Pendents }} </h4>
 
 
-  <p class="missatge" v-if="llista.length > 0 && Pendents === 0">
+  <p class="missatge" style="color: green;" v-if="llista.length > 0 && Pendents === 0">
     Has acabat totes les tasques
   </p>
 

@@ -1,4 +1,5 @@
 <script setup>
+// @ts-nocheck
 import HeaderComponent from "./components/HeaderComponent.vue";
 import { ref, computed } from "vue";
 
@@ -79,6 +80,12 @@ const llistaFiltrada = computed(() => {
 
     <div class="totals">
      <h4> Totals: {{ Totals }} | Pendents: {{ Pendents }} </h4>
+
+  
+  <p class="missatge" v-if="llista.length === 0 && Pendents === 0">
+    (Has acabat totes les tasques)
+  </p>
+
     </div>
 
   </main>
